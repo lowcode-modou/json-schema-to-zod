@@ -1,8 +1,11 @@
 {
   "name": "@lowcode-modou/json-schema-to-zod",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Converts JSON schema objects or files into Zod schemas",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "rimraf ./dist && tsc && copyfiles package.json LICENSE readme.md ./dist"
   },
