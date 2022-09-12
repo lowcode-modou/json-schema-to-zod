@@ -30,6 +30,11 @@ export const parseSchema = (schema: JSONSchema7 | boolean): string => {
 const addMeta = (schema: JSONSchema7, parsed: string): string => {
   if (schema.description)
     parsed += `.describe(${JSON.stringify(schema.description)})`;
+  Object.entries(schema).forEach(([key,value]) => {
+    if(key.startsWith('x-')){
+      parsed += `._describeMap(${JSON.stringify(value)})`;
+    }
+  })
   return parsed;
 };
 
