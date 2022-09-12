@@ -1,6 +1,6 @@
 {
   "name": "@lowcode-modou/json-schema-to-zod",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Converts JSON schema objects or files into Zod schemas",
   "main": "index.js",
   "scripts": {
